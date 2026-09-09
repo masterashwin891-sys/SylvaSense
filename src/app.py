@@ -35,7 +35,14 @@ carbon = biomass * 0.47
 
 st.metric("Estimated Biomass", f"{biomass:.2f} tonnes")
 st.metric("Estimated Carbon", f"{carbon:.2f} tonnes")
+st.subheader("🌍 Forest Risk Assessment")
 
+if canopy < 30:
+    st.error("🔴 HIGH RISK — Immediate forest protection required.")
+elif canopy < 60:
+    st.warning("🟡 MODERATE RISK — Increase monitoring and protect vegetation.")
+else:
+    st.success("🟢 LOW RISK — Forest condition is currently healthy.")
 if canopy < 30:
     st.warning("⚠️ Low canopy coverage detected!")
 else:
