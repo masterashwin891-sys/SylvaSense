@@ -1,4 +1,8 @@
+import csv
 def forest_analysis():
+    with open("data/forest_data.csv", "r") as file:
+    data = csv.DictReader(file)
+    print(list(data))
     print("🌲 SylvaSense - Forest Monitoring")
     print("--------------------------------")
 
